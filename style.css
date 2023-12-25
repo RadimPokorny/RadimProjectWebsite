@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap');
+
+:root{
+    --font: 'Inter', sans-serif;
+    --black: #171717;
+    --lightblack: #202020;
+    --white: #FFFFFF;
+    --white-hover: #FFFFFF60;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(var(--black), var(--lightblack));
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header p{
+    font-family: var(--font);
+    color: var(--white);
+    font-size: 64px;;
+}
+
+.box{
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.box-item{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: var(--white);
+    margin: 25px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.box-item:hover{
+    filter: drop-shadow(0 0 35px var(--white-hover));
+}
+.img-1{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: url('img/test.jpg');
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+.text{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.text-title{
+    height: auto !important;
+    font-family: var(--font);
+    font-size: 48px;
+    height: 100px;
+}
+.languages{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.l-box{
+    margin: 10px;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+}
+.l-box p{
+    font-family: var(--font);
+}
