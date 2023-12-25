@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+:root{
+    --dark: #820bf9;
+    --normal: #9c3efa;
+    --light: #a957fb;
+    --black: #202020;
+    --white: #F1F1F1;
+    --font: 'Inter', sans-serif;;
+}
+
+p, h1, h2, h3, h4, h5, button, textarea, text{
+    font-family: var(--font);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.center{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+}
+
+.calculator{
+    position: relative;
+    width: 420px;
+    height: 500px;
+    background-color: var(--dark);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+    filter: drop-shadow(0 0 50px var(--light))
+}
+
+.display{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: var(--black);
+    border-radius: 15px 15px 0 0;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+.keys{
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row !important;
+    margin-top: 10px;
+}
+.key{
+    position: relative;
+    height: 110px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--normal);
+    border-radius: 15px;
+    margin: 5px;
+    color: var(--black);
+    font-size: 24px;
+}
