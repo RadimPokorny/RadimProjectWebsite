@@ -1,15 +1,25 @@
 var charChain = "";
 
 function showContent() {
-    // Najdi prvek s třídou 'display'
     var displayParagraph = document.querySelector('.display p');
 
-    // Nastav hodnotu charChain jako obsah paragrafu
     displayParagraph.textContent = charChain;
 }
 
-function calculate(){
+function optimizeString() {
+    charChain = charChain.replace(/,/g, ".");
+    charChain = charChain.replace(/ /g, "");
+}
 
+function parse(str) {
+    return Function(`'use strict'; return (${str})`)()
+  }
+
+function calculate(){
+    var result;
+    optimizeString()
+    result = parse(charChain);
+    charChain = String(result);
 }
 
 function pressKey(element) {
@@ -37,7 +47,7 @@ function pressKey(element) {
             charChain += textContent;
         }
         else if(textContent == ","){
-            charChain += textContent;
+            charChain += ",";
         }
         else if(textContent == "DEL"){
             charChain = charChain.slice(0, -1);
@@ -45,7 +55,7 @@ function pressKey(element) {
         else if(textContent == "AC"){
             charChain = "";
         }
-        else if(textContent == "="){
+        else{
             calculate();
         }
     }
