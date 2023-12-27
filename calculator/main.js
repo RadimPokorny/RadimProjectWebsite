@@ -34,30 +34,19 @@ function pressKey(element) {
         if(textContent == "/"){
             charChain += textContent;
         }
-        else if(textContent == "*"){
-            charChain += textContent;
-        }
-        else if(textContent == "+"){
-            charChain += textContent;
-        }
-        else if(textContent == "-"){
-            charChain += textContent;
-        }
-        else if(textContent == "%"){
-            charChain += textContent;
-        }
-        else if(textContent == ","){
-            charChain += ",";
-        }
         else if(textContent == "DEL"){
             charChain = charChain.slice(0, -1);
         }
         else if(textContent == "AC"){
             charChain = "";
         }
-        else{
+        else if(textContent == "="){
             calculate();
         }
+        else{
+            charChain += textContent;
+        }
+        
     }
     
 
